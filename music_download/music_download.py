@@ -83,7 +83,10 @@ def main():
     sound_number = int(sound_number)
     download_url = get_download_url(sound_number)
     sound_name = input('请输入歌曲的名字:>>>>')
-    download_sound(download_url, sound_name)
+    if download_url:
+        download_sound(download_url, sound_name)
+    else:
+        print('该歌曲是vip歌曲，暂不能下载！')
     choose()
 
 
